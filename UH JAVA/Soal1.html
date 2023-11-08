@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 1</title>
+
+    <style>
+        #square {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+        }
+        #changeColorButtonBlue {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: red;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        #changeColorButtonRed {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: #0074d9;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+      </style>
+</head>
+
+<body>
+    <h1>Soal no. 1: Buatlah program untuk merubah tampilan persegi dengan warna background merah dan ketika di klik buttonnya maka menjadi warna biru</h1>
+    <h4>Program: </h4>
+    <div id="square"></div>
+  <button id="changeColorButtonBlue" onclick="changeColorRed()">Ubah Warna > merah</button>
+  <button id="changeColorButtonRed" onclick="changeColorBlue()">Ubah Warna > biru </button>
+
+  <script>
+    function changeColorBlue() {
+      var square = document.getElementById('square');
+      square.style.backgroundColor = 'blue';
+    }
+  </script>
+
+<script>
+    function changeColorRed() {
+      var square = document.getElementById('square');
+      square.style.backgroundColor = 'red';
+    }
+  </script>
+</body>
+</html>

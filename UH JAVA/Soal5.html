@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kembalian</title>
+</head>
+<body>
+    <h1>Soal no. 10: Kalkulator Kembalian</h1>
+    <label for="hargaBarang">Harga Barang:</label>
+    <input type="number" id="hargaBarang"><br>
+  
+    <label for="jumlahUang">Jumlah Uang yang Dibayarkan:</label>
+    <input type="number" id="jumlahUang"><br>
+  
+    <button onclick="hitungKembalian()">Hitung Kembalian</button>
+  
+    <p>Kembalian: <span id="kembalian"></span></p>
+  
+    <script>
+      function hitungKembalian() {
+        var hargaBarang = parseFloat(document.getElementById('hargaBarang').value);
+        var jumlahUang = parseFloat(document.getElementById('jumlahUang').value);
+  
+        if (isNaN(hargaBarang) || isNaN(jumlahUang)) {
+          alert("Harap masukkan angka yang valid.");
+        } else if (jumlahUang < hargaBarang) {
+          alert("Uang yang dibayarkan tidak mencukupi.");
+        } else {
+          var kembalian = jumlahUang - hargaBarang;
+          document.getElementById('kembalian').textContent = "Rp " + kembalian.toFixed(2);
+        }
+      }
+    </script>
+</body>
+</html>

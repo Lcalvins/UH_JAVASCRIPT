@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anak Ayam</title>
+</head>
+<body>
+    <h1>Soal no. 9: Perulangan Anak Ayam</h1>
+    <p id="output"></p>
+  
+    <script>
+      var outputElement = document.getElementById('output');
+      for (var i = 10; i >= 1; i--) {
+        if (i === 1) {
+          outputElement.innerHTML += "Anak Ayam Turun " + i + ", mati satu tinggal Induknya.<br>";
+        } else {
+          outputElement.innerHTML += "Anak Ayam Turun " + i + ", mati satu tinggal " + (i - 1) + ".<br>";
+        }
+      }
+    </script>
+  </body>
+</html>

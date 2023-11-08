@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Keliling Trapezium</title>
+</head>
+<body>
+    <h1>Soal no. 4: Menghitung Keliling Trapezium</h1>
+    <p>Masukkan panjang sisi trapezium:</p>
+  
+    <label for="sideA">Panjang Sisi a:</label>
+    <input type="number" id="sideA">
+    <br>
+  
+    <label for="sideB">Panjang Sisi b:</label>
+    <input type="number" id="sideB">
+    <br>
+  
+    <label for="sideC">Panjang Sisi c:</label>
+    <input type="number" id="sideC">
+    <br>
+  
+    <label for="sideD">Panjang Sisi d:</label>
+    <input type="number" id="sideD">
+    <br>
+  
+    <button onclick="calculatePerimeter()">Hitung Keliling</button>
+    <p>Hasil Keliling: <span id="result"></span></p>
+  
+    <script>
+      function calculatePerimeter() {
+        var sideA = parseFloat(document.getElementById('sideA').value);
+        var sideB = parseFloat(document.getElementById('sideB').value);
+        var sideC = parseFloat(document.getElementById('sideC').value);
+        var sideD = parseFloat(document.getElementById('sideD').value);
+  
+        if (isNaN(sideA) || isNaN(sideB) || isNaN(sideC) || isNaN(sideD)) {
+          alert("Masukkan panjang sisi dengan angka.");
+          return;
+        }
+  
+        var perimeter = sideA + sideB + sideC + sideD;
+        document.getElementById('result').textContent = perimeter;
+      }
+    </script>
+  </body>
+</html>
